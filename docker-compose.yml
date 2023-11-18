@@ -5,10 +5,15 @@ services:
     container_name: gen
     ports:
       - "5000:5000"
+    volumes:
+      - ./quote_gen:/app
+      
   web2:
     build: ./quote_disp
     container_name: disp
     ports:
       - "5001:5001"
+    volumes:
+      - ./quote_disp:/app
     depends_on:
       - web1

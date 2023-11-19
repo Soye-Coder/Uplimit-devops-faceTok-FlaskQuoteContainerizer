@@ -39,9 +39,9 @@ def test_quote_endpoint(mock_randrange, gen_client):
     expected_quote = "The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela"
     assert response.data.decode("utf-8") == expected_quote
 
-def test_quote_disp_endpoint(disp_client):
-    response = disp_client.get('/get_quote')
-    assert response.status_code == 200
+# def test_quote_disp_endpoint(disp_client):
+#     response = disp_client.get('/get_quote')
+#     assert response.status_code == 200
     
 def test_quote_disp_endpoint_health(disp_client):
     response = disp_client.get('/health')

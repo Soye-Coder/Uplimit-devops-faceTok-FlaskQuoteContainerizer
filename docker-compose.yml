@@ -2,17 +2,17 @@ version: "3.7"
 services:
   web1:
     build: ./quote_gen
-    # container_name: gen
+    container_name: gen
     ports:
-      - "90-95:5000"
+      - "5000:5000"
     volumes:
       - ./quote_gen:/app
       
   web2:
     build: ./quote_disp
-    # container_name: disp
+    container_name: disp
     ports:
-      - "80-85:5001"
+      - "5001:5001"
     volumes:
       - ./quote_disp:/app
     depends_on:

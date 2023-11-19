@@ -43,3 +43,6 @@ jobs:
         with:
           pytest-coverage-path: ./pytest-coverage.txt
           junitxml-path: ./pytest.xml
+
+      - name: Stop and remove Docker containers
+        run: docker-compose down
